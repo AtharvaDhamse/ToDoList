@@ -18,7 +18,7 @@
 5.  The command starts your Node.js application using the script defined in your project's package.json
     > npm start
 
-### For forntend: -
+### For frontend: -
 1.  The command to create a new React web application
     > npx create-react-app <app_name>
 
