@@ -1,5 +1,36 @@
 # ToDoList
 
+## Instructions to run the application: -
+### For backend: -
+1.  To initialize a new Node.js project by creating a package.json file
+    > npm init
+    (here for entry point specify as "src/index.ts")
+
+2.  The command to install development dependencies for a TypeScript Node.js project
+    > npm i ts-node typescript nodemon @types/cors @types/express @types/node --save-dev   
+
+3.  The command to install the required npm packages
+    > npm i @prisma/client cors express prisma   
+
+4.  The command initializes a TypeScript project by generating a tsconfig.json configuration file
+    > npx tsc --init
+
+5.  The command starts your Node.js application using the script defined in your project's package.json
+    > npm start
+
+### For forntend: -
+1.  The command to create a new React web application
+    > npx create-react-app <app_name>
+
+2.  Change your working directory to the newly created project folder
+    > cd <app_name>
+
+3.  Command to start the development server, which will run your React app
+    > npm start
+
+ <hr></hr>
+ <hr></hr>       
+
 ## ScreenShots
 
 ### Home page where we can add a new note.
