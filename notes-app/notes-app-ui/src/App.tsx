@@ -108,21 +108,25 @@ const App = () => {
       setSelectedNote(null);
     }
 
-  const deleteNote = async (event: React.MouseEvent, noteId: number) =>{
-    event.stopPropagation();
+    const deleteNote = async (event: React.MouseEvent, noteId: number) =>{
 
-    try {
-
-      await fetch(`http://localhost:5000/api/notes/${noteId}`,
-      {
-        method: "DELETE",
-      })
-
-      const updatedNotes = notes.filter((note)=> note.id !== noteId)
-      setNotes(updatedNotes); 
-    } 
-    catch (error) {
-      console.log(error)
+      const isConfirmed = window.confirm('Are you sure you want to delete this note?');
+  
+      if (isConfirmed) {
+      event.stopPropagation();
+      try {
+  
+        await fetch(`http://localhost:5000/api/notes/${noteId}`,
+        {
+          method: "DELETE",
+        })
+  
+        const updatedNotes = notes.filter((note)=> note.id !== noteId)
+        setNotes(updatedNotes); 
+      } 
+      catch (error) {
+        console.log(error)
+      }
     }
   }
 
